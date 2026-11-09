@@ -1,0 +1,29 @@
+{
+  "name": "warehouse-clarification-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.12" },
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"node --env-file-if-exists=.env server/index.js\" \"vite\"",
+    "build": "vite build",
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@google/genai": "^2.15.0",
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.5.0",
+    "express": "^5.2.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "three": "^0.183.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.2.0",
+    "concurrently": "^9.2.5",
+    "vite": "^7.3.6",
+    "vitest": "^4.1.11"
+  }
+}
